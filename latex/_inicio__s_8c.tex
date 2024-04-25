@@ -1,0 +1,150 @@
+\doxysection{Inicio\+\_\+s.\+c File Reference}
+\hypertarget{_inicio__s_8c}{}\label{_inicio__s_8c}\index{Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_inicio__s_8c_aeb1f9e232c04f28ad0db2f916afda234}{LONGITUD\+\_\+\+EMAIL}}~30
+\item 
+\#define \mbox{\hyperlink{_inicio__s_8c_af23ec6d07dd6170f746fb8edc21e8625}{LONGITUD\+\_\+\+CONTRASENA}}~15
+\item 
+\#define \mbox{\hyperlink{_inicio__s_8c_a67095f626dda02f0f0458527e41496a9}{LONGITUD\+\_\+\+LINEA}}~200
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_inicio__s_8c_ae1a12789f4408e5fa40d3327288d88ae}{inicio\+\_\+sesion}} ()
+\item 
+int \mbox{\hyperlink{_inicio__s_8c_afb5007230b3cf37522752c6781ed6eee}{email\+\_\+archivo}} (const char \texorpdfstring{$\ast$}{*}nombre\+\_\+archivo, const char \texorpdfstring{$\ast$}{*}email, char \texorpdfstring{$\ast$}{*}password)
+\item 
+int \mbox{\hyperlink{_inicio__s_8c_a27a340fdcb1660a9b17d62292c312aff}{contrasena\+\_\+cliente}} (const char \texorpdfstring{$\ast$}{*}line, char \texorpdfstring{$\ast$}{*}password)
+\item 
+int \mbox{\hyperlink{_inicio__s_8c_a8a9fa79d27895de46ce0768225b1ee9f}{contrasena\+\_\+transportista}} (const char \texorpdfstring{$\ast$}{*}line, char \texorpdfstring{$\ast$}{*}password)
+\item 
+int \mbox{\hyperlink{_inicio__s_8c_a90e206f89b44fa4f01b93f5315b0ec41}{contrasena\+\_\+\+Admin\+Prov}} (const char \texorpdfstring{$\ast$}{*}line, char \texorpdfstring{$\ast$}{*}password)
+\item 
+int \mbox{\hyperlink{_inicio__s_8c_a78a0bfa45d4cd30e95058da3b8585cba}{f\+\_\+email}} (FILE \texorpdfstring{$\ast$}{*}file, const char \texorpdfstring{$\ast$}{*}email, char \texorpdfstring{$\ast$}{*}password, \mbox{\hyperlink{_inicios_8h_a22988189f4f2c5d5ef06075e801edfea}{Funcion\+Contrasena}} func)
+\item 
+void \mbox{\hyperlink{_inicio__s_8c_af941e487386e9423b97c46c200d75ae4}{cartera}} (char \texorpdfstring{$\ast$}{*}email, char \texorpdfstring{$\ast$}{*}password, float cantidad\+\_\+a\+\_\+anadir)
+\item 
+int \mbox{\hyperlink{_inicio__s_8c_a66a822ec413f1c8134e34ef459b3941b}{buscar\+\_\+linea\+\_\+cliente}} (const char \texorpdfstring{$\ast$}{*}nombre\+\_\+archivo, const char \texorpdfstring{$\ast$}{*}email, const char \texorpdfstring{$\ast$}{*}password, char \texorpdfstring{$\ast$}{*}linea\+\_\+cliente)
+\item 
+void \mbox{\hyperlink{_inicio__s_8c_a41e2038291dc37f3012cd9ccfb570466}{listar\+\_\+productos}} (FILE \texorpdfstring{$\ast$}{*}archivo)
+\item 
+void \mbox{\hyperlink{_inicio__s_8c_a69e596a4f1a4d96e88b948b28ec6bbac}{manejar\+\_\+opciones\+\_\+usuario}} (int archivo\+Encontrado, const char \texorpdfstring{$\ast$}{*}email, const char \texorpdfstring{$\ast$}{*}password)
+\item 
+void \mbox{\hyperlink{_inicio__s_8c_a0cb37b1b8c41af98485c76ee291ab475}{reemplazar\+Frase}} (const char \texorpdfstring{$\ast$}{*}nombre\+Archivo, const char \texorpdfstring{$\ast$}{*}buscar, const char \texorpdfstring{$\ast$}{*}reemplazar)
+\item 
+void \mbox{\hyperlink{_inicio__s_8c_acb985e370b8e1ef7b88c075213cc2d2f}{admin\+\_\+modificar}} (const char \texorpdfstring{$\ast$}{*}nombre)
+\item 
+void \mbox{\hyperlink{_inicio__s_8c_a9d1f0b69817f97dfb38c0d6c6262dbfd}{obtener\+\_\+id\+\_\+de\+\_\+admin\+\_\+prov}} (const char \texorpdfstring{$\ast$}{*}password, char \texorpdfstring{$\ast$}{*}id)
+\item 
+void \mbox{\hyperlink{_inicio__s_8c_a97a3fb89c485d06a2204237badf86ad1}{listar\+\_\+productos\+\_\+con\+\_\+id}} (const char \texorpdfstring{$\ast$}{*}id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_inicio__s_8c_aeb1f9e232c04f28ad0db2f916afda234}\label{_inicio__s_8c_aeb1f9e232c04f28ad0db2f916afda234} 
+\index{Inicio\_s.c@{Inicio\_s.c}!LONGITUD\_EMAIL@{LONGITUD\_EMAIL}}
+\index{LONGITUD\_EMAIL@{LONGITUD\_EMAIL}!Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection{\texorpdfstring{LONGITUD\_EMAIL}{LONGITUD\_EMAIL}}
+{\footnotesize\ttfamily \#define LONGITUD\+\_\+\+EMAIL~30}
+
+\Hypertarget{_inicio__s_8c_af23ec6d07dd6170f746fb8edc21e8625}\label{_inicio__s_8c_af23ec6d07dd6170f746fb8edc21e8625} 
+\index{Inicio\_s.c@{Inicio\_s.c}!LONGITUD\_CONTRASENA@{LONGITUD\_CONTRASENA}}
+\index{LONGITUD\_CONTRASENA@{LONGITUD\_CONTRASENA}!Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection{\texorpdfstring{LONGITUD\_CONTRASENA}{LONGITUD\_CONTRASENA}}
+{\footnotesize\ttfamily \#define LONGITUD\+\_\+\+CONTRASENA~15}
+
+\Hypertarget{_inicio__s_8c_a67095f626dda02f0f0458527e41496a9}\label{_inicio__s_8c_a67095f626dda02f0f0458527e41496a9} 
+\index{Inicio\_s.c@{Inicio\_s.c}!LONGITUD\_LINEA@{LONGITUD\_LINEA}}
+\index{LONGITUD\_LINEA@{LONGITUD\_LINEA}!Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection{\texorpdfstring{LONGITUD\_LINEA}{LONGITUD\_LINEA}}
+{\footnotesize\ttfamily \#define LONGITUD\+\_\+\+LINEA~200}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_inicio__s_8c_ae1a12789f4408e5fa40d3327288d88ae}\label{_inicio__s_8c_ae1a12789f4408e5fa40d3327288d88ae} 
+\index{Inicio\_s.c@{Inicio\_s.c}!inicio\_sesion@{inicio\_sesion}}
+\index{inicio\_sesion@{inicio\_sesion}!Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection{\texorpdfstring{inicio\_sesion()}{inicio\_sesion()}}
+{\footnotesize\ttfamily void inicio\+\_\+sesion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_inicio__s_8c_afb5007230b3cf37522752c6781ed6eee}\label{_inicio__s_8c_afb5007230b3cf37522752c6781ed6eee} 
+\index{Inicio\_s.c@{Inicio\_s.c}!email\_archivo@{email\_archivo}}
+\index{email\_archivo@{email\_archivo}!Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection{\texorpdfstring{email\_archivo()}{email\_archivo()}}
+{\footnotesize\ttfamily int email\+\_\+archivo (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{nombre\+\_\+archivo,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{email,  }\item[{char \texorpdfstring{$\ast$}{*}}]{password }\end{DoxyParamCaption})}
+
+\Hypertarget{_inicio__s_8c_a27a340fdcb1660a9b17d62292c312aff}\label{_inicio__s_8c_a27a340fdcb1660a9b17d62292c312aff} 
+\index{Inicio\_s.c@{Inicio\_s.c}!contrasena\_cliente@{contrasena\_cliente}}
+\index{contrasena\_cliente@{contrasena\_cliente}!Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection{\texorpdfstring{contrasena\_cliente()}{contrasena\_cliente()}}
+{\footnotesize\ttfamily int contrasena\+\_\+cliente (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{line,  }\item[{char \texorpdfstring{$\ast$}{*}}]{password }\end{DoxyParamCaption})}
+
+\Hypertarget{_inicio__s_8c_a8a9fa79d27895de46ce0768225b1ee9f}\label{_inicio__s_8c_a8a9fa79d27895de46ce0768225b1ee9f} 
+\index{Inicio\_s.c@{Inicio\_s.c}!contrasena\_transportista@{contrasena\_transportista}}
+\index{contrasena\_transportista@{contrasena\_transportista}!Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection{\texorpdfstring{contrasena\_transportista()}{contrasena\_transportista()}}
+{\footnotesize\ttfamily int contrasena\+\_\+transportista (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{line,  }\item[{char \texorpdfstring{$\ast$}{*}}]{password }\end{DoxyParamCaption})}
+
+\Hypertarget{_inicio__s_8c_a90e206f89b44fa4f01b93f5315b0ec41}\label{_inicio__s_8c_a90e206f89b44fa4f01b93f5315b0ec41} 
+\index{Inicio\_s.c@{Inicio\_s.c}!contrasena\_AdminProv@{contrasena\_AdminProv}}
+\index{contrasena\_AdminProv@{contrasena\_AdminProv}!Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection{\texorpdfstring{contrasena\_AdminProv()}{contrasena\_AdminProv()}}
+{\footnotesize\ttfamily int contrasena\+\_\+\+Admin\+Prov (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{line,  }\item[{char \texorpdfstring{$\ast$}{*}}]{password }\end{DoxyParamCaption})}
+
+\Hypertarget{_inicio__s_8c_a78a0bfa45d4cd30e95058da3b8585cba}\label{_inicio__s_8c_a78a0bfa45d4cd30e95058da3b8585cba} 
+\index{Inicio\_s.c@{Inicio\_s.c}!f\_email@{f\_email}}
+\index{f\_email@{f\_email}!Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection{\texorpdfstring{f\_email()}{f\_email()}}
+{\footnotesize\ttfamily int f\+\_\+email (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{file,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{email,  }\item[{char \texorpdfstring{$\ast$}{*}}]{password,  }\item[{\mbox{\hyperlink{_inicios_8h_a22988189f4f2c5d5ef06075e801edfea}{Funcion\+Contrasena}}}]{func }\end{DoxyParamCaption})}
+
+\Hypertarget{_inicio__s_8c_af941e487386e9423b97c46c200d75ae4}\label{_inicio__s_8c_af941e487386e9423b97c46c200d75ae4} 
+\index{Inicio\_s.c@{Inicio\_s.c}!cartera@{cartera}}
+\index{cartera@{cartera}!Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection{\texorpdfstring{cartera()}{cartera()}}
+{\footnotesize\ttfamily void cartera (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{email,  }\item[{char \texorpdfstring{$\ast$}{*}}]{password,  }\item[{float}]{cantidad\+\_\+a\+\_\+anadir }\end{DoxyParamCaption})}
+
+\Hypertarget{_inicio__s_8c_a66a822ec413f1c8134e34ef459b3941b}\label{_inicio__s_8c_a66a822ec413f1c8134e34ef459b3941b} 
+\index{Inicio\_s.c@{Inicio\_s.c}!buscar\_linea\_cliente@{buscar\_linea\_cliente}}
+\index{buscar\_linea\_cliente@{buscar\_linea\_cliente}!Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection{\texorpdfstring{buscar\_linea\_cliente()}{buscar\_linea\_cliente()}}
+{\footnotesize\ttfamily int buscar\+\_\+linea\+\_\+cliente (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{nombre\+\_\+archivo,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{email,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{password,  }\item[{char \texorpdfstring{$\ast$}{*}}]{linea\+\_\+cliente }\end{DoxyParamCaption})}
+
+\Hypertarget{_inicio__s_8c_a41e2038291dc37f3012cd9ccfb570466}\label{_inicio__s_8c_a41e2038291dc37f3012cd9ccfb570466} 
+\index{Inicio\_s.c@{Inicio\_s.c}!listar\_productos@{listar\_productos}}
+\index{listar\_productos@{listar\_productos}!Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection{\texorpdfstring{listar\_productos()}{listar\_productos()}}
+{\footnotesize\ttfamily void listar\+\_\+productos (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{archivo }\end{DoxyParamCaption})}
+
+\Hypertarget{_inicio__s_8c_a69e596a4f1a4d96e88b948b28ec6bbac}\label{_inicio__s_8c_a69e596a4f1a4d96e88b948b28ec6bbac} 
+\index{Inicio\_s.c@{Inicio\_s.c}!manejar\_opciones\_usuario@{manejar\_opciones\_usuario}}
+\index{manejar\_opciones\_usuario@{manejar\_opciones\_usuario}!Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection{\texorpdfstring{manejar\_opciones\_usuario()}{manejar\_opciones\_usuario()}}
+{\footnotesize\ttfamily void manejar\+\_\+opciones\+\_\+usuario (\begin{DoxyParamCaption}\item[{int}]{archivo\+Encontrado,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{email,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{password }\end{DoxyParamCaption})}
+
+\Hypertarget{_inicio__s_8c_a0cb37b1b8c41af98485c76ee291ab475}\label{_inicio__s_8c_a0cb37b1b8c41af98485c76ee291ab475} 
+\index{Inicio\_s.c@{Inicio\_s.c}!reemplazarFrase@{reemplazarFrase}}
+\index{reemplazarFrase@{reemplazarFrase}!Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection{\texorpdfstring{reemplazarFrase()}{reemplazarFrase()}}
+{\footnotesize\ttfamily void reemplazar\+Frase (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{nombre\+Archivo,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{buscar,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{reemplazar }\end{DoxyParamCaption})}
+
+\Hypertarget{_inicio__s_8c_acb985e370b8e1ef7b88c075213cc2d2f}\label{_inicio__s_8c_acb985e370b8e1ef7b88c075213cc2d2f} 
+\index{Inicio\_s.c@{Inicio\_s.c}!admin\_modificar@{admin\_modificar}}
+\index{admin\_modificar@{admin\_modificar}!Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection{\texorpdfstring{admin\_modificar()}{admin\_modificar()}}
+{\footnotesize\ttfamily void admin\+\_\+modificar (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{nombre }\end{DoxyParamCaption})}
+
+\Hypertarget{_inicio__s_8c_a9d1f0b69817f97dfb38c0d6c6262dbfd}\label{_inicio__s_8c_a9d1f0b69817f97dfb38c0d6c6262dbfd} 
+\index{Inicio\_s.c@{Inicio\_s.c}!obtener\_id\_de\_admin\_prov@{obtener\_id\_de\_admin\_prov}}
+\index{obtener\_id\_de\_admin\_prov@{obtener\_id\_de\_admin\_prov}!Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection{\texorpdfstring{obtener\_id\_de\_admin\_prov()}{obtener\_id\_de\_admin\_prov()}}
+{\footnotesize\ttfamily void obtener\+\_\+id\+\_\+de\+\_\+admin\+\_\+prov (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{password,  }\item[{char \texorpdfstring{$\ast$}{*}}]{id }\end{DoxyParamCaption})}
+
+\Hypertarget{_inicio__s_8c_a97a3fb89c485d06a2204237badf86ad1}\label{_inicio__s_8c_a97a3fb89c485d06a2204237badf86ad1} 
+\index{Inicio\_s.c@{Inicio\_s.c}!listar\_productos\_con\_id@{listar\_productos\_con\_id}}
+\index{listar\_productos\_con\_id@{listar\_productos\_con\_id}!Inicio\_s.c@{Inicio\_s.c}}
+\doxysubsubsection{\texorpdfstring{listar\_productos\_con\_id()}{listar\_productos\_con\_id()}}
+{\footnotesize\ttfamily void listar\+\_\+productos\+\_\+con\+\_\+id (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{id }\end{DoxyParamCaption})}
+

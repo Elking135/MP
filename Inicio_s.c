@@ -241,7 +241,9 @@ void cartera(char *email, char *password, float cantidad_a_anadir) {
     fclose(file);
 }
 
-
+//Cabecera int buscar_linea_cliente(const char *, const char *, const char *, char *)
+//Precondicion el archivo especificado por nombre_archivo debe existir y ser accesible para lectura
+//Postcondicion la funcion busca una línea en el archivo que contenga el correo electrónico y la contrasena proporcionados. Si se encuentra, no realiza ninguna acción adicional. Si no se encuentra, no hay efecto observable en el estado del programa
 int buscar_linea_cliente(const char *nombre_archivo, const char *email, const char *password, char *linea_cliente) {
     FILE *file = fopen(nombre_archivo, "r");
     char *token;
@@ -254,12 +256,14 @@ int buscar_linea_cliente(const char *nombre_archivo, const char *email, const ch
         if (strcmp(token, email) == 0) {
             token = strtok(NULL, "-"); // Obtiene la contraseña
             if (strcmp(token, password) == 0) {
-                break;
             }
         }
     }
 }
 
+//Cabecera void listar_productos(FILE *)
+//Precondicion el archivo proporcionado debe existir y ser accesible para lectura
+//Postcondicion la funcion muestra el contenido del archivo linea por linea, imprimiendo cada una en la consola. Luego, pausa la ejecucion del programa y espera a que el usuario presione una tecla antes de continuar. Finalmente, cierra el archivo
 void listar_productos(FILE *archivo) {
     FILE *file = fopen(archivo, "r");
     char linea[LONGITUD_LINEA];
@@ -359,6 +363,9 @@ void manejar_opciones_usuario(int archivoEncontrado, const char *email, const ch
     }
 }
 
+//Cabecera int buscar_linea_cliente(const char *, const char *, const char *, char *)
+//Precondicion se debe haber identificado previamente el tipo de archivo de usuario y las credenciales deben ser válidas
+//Postcondicion la funcion ofrece un menu de opciones basado en el tipo de archivo de usuario encontrado y ejecuta la acción seleccionada por el usuario. Si no se selecciona una accion valida, reinicia el proceso de inicio de sesion
 void reemplazarFrase(const char *nombreArchivo, const char *buscar, const char *reemplazar) {
     FILE *archivoEntrada, *archivoSalida;
     char linea[1024];

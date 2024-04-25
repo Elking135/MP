@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1713892046 source:c:\users\usuario\documents\trabajos\uca\1er año\mp\proyecto mp\untitled1.c
+	<stdio.h>
+	<stdlib.h>
+	"Carga.h"
+	"Inicios.h"
+
+1713728977 c:\users\usuario\documents\trabajos\uca\1er año\mp\proyecto mp\carga.h
+
+1713972426 source:c:\users\usuario\documents\trabajos\uca\1er año\mp\proyecto mp\inicio_s.c
+	<stdio.h>
+	<string.h>
+	"Inicios.h"
+	"Administrador.h"
+	"Transportista.h"
+	"Proveedor.h"
+	"Cliente.h"
+	"Eleccion.h"
+
+1713971378 c:\users\usuario\documents\trabajos\uca\1er año\mp\proyecto mp\inicios.h
+
+1713972747 source:c:\users\usuario\documents\trabajos\uca\1er año\mp\proyecto mp\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Carga.h"
+	"Inicios.h"
+
+1713966053 source:c:\users\usuario\documents\trabajos\uca\1er año\mp\proyecto mp\funciones_perfiles.c
+	<stdio.h>
+	<string.h>
+	"Administrador.h"
+	"Transportista.h"
+	"Proveedor.h"
+	"Cliente.h"
+	"Eleccion.h"
+
+1713959679 c:\users\usuario\documents\trabajos\uca\1er año\mp\proyecto mp\administrador.h
+
+1713728112 c:\users\usuario\documents\trabajos\uca\1er año\mp\proyecto mp\transportista.h
+
+1713972039 c:\users\usuario\documents\trabajos\uca\1er año\mp\proyecto mp\proveedor.h
+
+1713728093 c:\users\usuario\documents\trabajos\uca\1er año\mp\proyecto mp\cliente.h
+
+1713728105 c:\users\usuario\documents\trabajos\uca\1er año\mp\proyecto mp\eleccion.h
+
