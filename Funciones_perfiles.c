@@ -4,7 +4,7 @@
 #include "Transportista.h"
 #include "Proveedor.h"
 #include "Cliente.h"
-#include "Eleccion.h"
+#include "Eleccion.h"/*
 int main(){
     int p,x,y;
     scanf("%i",&y); //prueba en vez de perfiles.perfil
@@ -14,8 +14,8 @@ int main(){
         if(y==2){
             do{
             printf("Usuario:");
-   /*         for(p=0;p<20;p++)
-                printf("%c",&/*nombre cliente en el registro*);         */
+   //         for(p=0;p<20;p++)
+   //             printf("%c",&/*nombre cliente en el registro*);
             printf("\n---------------------\n1.Perfil\n2.Productos\n3.Descuentos\n4.Pedidos\n5.Devoluciones\n6.Salir del sistema\n");
             scanf("%i",&x);
             if(x>6 || x<=0)
@@ -50,8 +50,8 @@ int main(){
             if(y==3){
                 do{
                     printf("Empresa:");
-    /*                for(p=0;p<20;p++)
-                        printf("%c",&/*nombre empresa en el registro*);         */
+    //                for(p=0;p<20;p++)
+      //                  printf("%c",&/*nombre empresa en el registro*);
                     printf("\n---------------------\n1.Perfil\n2.Productos\n3.Pedidos\n4.Salir del sistema\n");
                     scanf("%i",&x);
                 if(x>4 || x<=0)
@@ -78,8 +78,8 @@ int main(){
                 if(y==4){
                     do{
                         printf("Transportista:");
-  /*                      for(p=0;p<20;p++)
-                            printf("%c",&/*nombre transportista en el registro*);           */
+  //                      for(p=0;p<20;p++)
+  //                          printf("%c",&/*nombre transportista en el registro*);
                         printf("\n---------------------\n1.Perfiles\n2.Clientes\n3.Proveedores\n4.Productos\n5.Categorias\n6.Pedidos\n7.Transportista\n8.Descuentos\n9.Devoluciones\n10.Salir del sistema\n");
                         scanf("%i",&x);
                         if(x>10 || x<=0)
@@ -105,7 +105,7 @@ int main(){
             }
         }
     }
-}
+}*/
 void a_administrador_menu(){
     int x;
     do{
@@ -175,7 +175,7 @@ void a_administrador_perfil(const char *password){
         while (fgets(linea, sizeof(linea), f)) {
             if (strstr(linea, password) != NULL) {
                 printf("%s", linea);
-                printf("Desea modificar esta línea? (1 para sí, 2 para añadir algo, otro para no): ");
+                printf("Desea modificar esta linea? (1 para si, 2 para anadir algo, otro para no): ");
                 scanf("%d", &opcion);
                 getchar(); // Limpiar el buffer de entrada
 
@@ -186,7 +186,7 @@ void a_administrador_perfil(const char *password){
                     fputs(nuevaLinea, archivoTemporal);
                     fputs("\n", archivoTemporal); // Añadir nueva línea al final
                 } else if(opcion == 2){
-                    printf("Ingrese el texto que desea añadir: ");
+                    printf("Ingrese el texto que desea anadir: ");
                     fgets(nuevaLinea, sizeof(nuevaLinea), stdin);
                     nuevaLinea[strcspn(nuevaLinea, "\n")] = '\0'; // Eliminar el carácter de nueva línea
                     fputs(linea, archivoTemporal); // Copiar la línea existente
@@ -214,54 +214,14 @@ void a_administrador_perfil(const char *password){
     a_administrador_menu();
 }
 
-
-void reemplazarFrase(const char *nombreArchivo, const char *buscar, const char *reemplazar) {
-    FILE *archivoEntrada, *archivoSalida;
-    char linea[1024];
-    archivoEntrada = fopen(nombreArchivo, "r");
-    if (archivoEntrada == NULL) {
-        printf("Error al abrir el archivo original.\n");
-        return;
-    }
-
-    // Crear un archivo temporal para escritura
-    archivoSalida = fopen("archivo_temp.txt", "w");
-    if (archivoSalida == NULL) {
-        printf("Error al crear el archivo temporal.\n");
-        fclose(archivoEntrada);
-        return;
-    }
-
-    // Leer y escribir cada línea
-    while (fgets(linea, 1024, archivoEntrada) != NULL) {
-        char *posicion;
-        while ((posicion = strstr(linea, buscar)) != NULL) {
-            // Escribir parte del contenido hasta la frase a reemplazar
-            *posicion = '\0';
-            fputs(linea, archivoSalida);
-            fputs(reemplazar, archivoSalida);
-            // Continuar leyendo después de la frase a reemplazar
-            memmove(linea, posicion + strlen(buscar), strlen(posicion + strlen(buscar)) + 1);
-        }
-        // Escribir el resto de la línea
-        fputs(linea, archivoSalida);
-    }
-
-    fclose(archivoEntrada);
-    fclose(archivoSalida);
-
-    // Reemplazar el archivo original con el archivo temporal
-    remove(nombreArchivo);
-    rename("archivo_temp.txt", nombreArchivo);
-
 void a_administrador_mostrar(const char *nombre){
     char content, buscar[100],reemplazar[100];
-    int x,y;
+    int y;
     FILE *archivoEntrada;
     archivoEntrada=fopen(nombre,"r");
     if (archivoEntrada == NULL) {
         printf("Error al abrir el archivo original.\n");
-        a_administrador_menu();
+        inicio_sesion();
     }
     content = fgetc(archivoEntrada);
     while(content!=EOF){
@@ -269,33 +229,21 @@ void a_administrador_mostrar(const char *nombre){
         content=fgetc(archivoEntrada);
     }
     fclose(archivoEntrada);
-    printf("\nDesea modificar los datos?\n");
-    puts("Pulse 1 en caso afirmativo, en caso contrario, pulse cualquuier otra tecla");
-    scanf("%i",&x);
-    getchar();
     do{
-        if(x==1){
-            puts("Que quieres cambiar del archivo?");
-            fgets(buscar,100,stdin);
-            buscar[strcspn(buscar, "\n")] = '\0'; // Eliminar el car�cter de nueva l�nea
+        fflush(stdin);
+        puts("Que quieres cambiar del archivo? (Escribe la linea completa)");
+        fgets(buscar,100,stdin);
+        buscar[strcspn(buscar, "\n")] = '\0'; // Eliminar el caracter de nueva l�nea
 
-            puts("Por que lo quieres cambiar?");
-            fgets(reemplazar,100,stdin);
-            reemplazar[strcspn(reemplazar, "\n")] = '\0'; // Eliminar el car�cter de nueva l�nea
+        puts("Por que lo quieres cambiar? (Escribe la linea tal cual modificando la parte que quieres)");
+        fgets(reemplazar,100,stdin);
+        reemplazar[strcspn(reemplazar, "\n")] = '\0'; // Eliminar el caracter de nueva l�nea
 
-            reemplazarFrase(nombre, buscar, reemplazar);
-            printf("La frase ha sido modificada con exito en todo el archivo.\n");
-        }
-        else
-            a_administrador_menu;
+        reemplazarFrase(nombre, buscar, reemplazar);
+        printf("La frase ha sido modificada con exito en todo el archivo.\n");
         printf("Desea realizar otro cambio?\nPulse 1 si es asi, pulse otra si no desea modificar nada mas\n");
         scanf("%i",&y);
         getchar();
     }while(y==1);
-    a_administrador_menu();
 }
-void a_administrador_proveedores(){
-
-}
-
 
